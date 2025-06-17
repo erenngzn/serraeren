@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serra ❤️ Eren</title>
+<link rel="icon" href="images/logo.png" type="image/png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --love-gradient: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            background: var(--primary-gradient);
+        }
+
+        /* Modern Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #667eea, #764ba2, #ff6b9d, #c44569);
+            background-size: 400% 400%;
+            animation: modernGradient 15s ease infinite;
+            z-index: -3;
+        }
+
+        @keyframes modernGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Geometric Shapes Background */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatShape 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 60px;
+            height: 60px;
+            background: var(--love-gradient);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation-delay: -10s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+
+        /* Modern Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 16px;
+            opacity: 0;
+            animation: modernHeartFloat 12s infinite linear;
+        }
+
+        @keyframes modernHeartFloat {
+            0% {
+                transform: translateY(100vh) translateX(-50px) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) translateX(0px) rotate(45deg) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) translateX(50px) rotate(315deg) scale(1);
+            }
+            100% {
+                transform: translateY(-10vh) translateX(100px) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Modern Login Container */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            z-index: 10;
+            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .login-container.hide {
+            opacity: 0;
+            transform: scale(0.9) translateY(-50px);
+            pointer-events: none;
+        }
+
+        /* Modern Title Design */
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 6rem);
+            background: linear-gradient(135deg, #fff 0%, #ff6b9d 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: titleGlow 4s ease-in-out infinite alternate;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            position: relative;
+        }
+
+        @keyframes titleGlow {
+            from { 
+                filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)) drop-shadow(0 0 20px rgba(255,255,255,0.2));
+            }
+            to { 
+                filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)) drop-shadow(0 0 40px rgba(255,107,157,0.4));
+            }
+        }
+
+        /* Modern Characters Container */
+        .characters-container {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .character {
+            position: absolute;
+            transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3));
+        }
+
+        .character-photo {
+            width: 120px;
+            height: auto;
+            border-radius: 20px;
+            transition: all 1.5s ease;
+        }
+
+        .girl-character {
+            left: 15%;
+            animation: modernFloat 6s ease-in-out infinite;
+        }
+
+        .boy-character {
+            right: 15%;
+            animation: modernFloat 6s ease-in-out infinite 2s;
+        }
+
+        @keyframes modernFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1);
+            }
+            50% { 
+                transform: translateY(-15px) scale(1.05);
+            }
+        }
+
+        .love-bridge {
+            position: absolute;
+            font-size: 2.5rem;
+            opacity: 0;
+            transition: all 1.5s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Unite Animation */
+        .characters-container.unite .girl-character {
+            left: 45%;
+            transform: translateX(-50%) scale(1.1);
+            animation: loveHeartbeat 1.5s ease-in-out infinite;
+        }
+
+        .characters-container.unite .boy-character {
+            right: 45%;
+            transform: translateX(50%) scale(1.1);
+            animation: loveHeartbeat 1.5s ease-in-out infinite;
+        }
+
+        .characters-container.unite .love-bridge {
+            opacity: 1;
+            color: #ff6b9d;
+            text-shadow: 0 0 20px rgba(255, 107, 157, 0.8);
+        }
+
+        @keyframes loveHeartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1.1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+        }
+
+        /* Modern Login Form */
+        .login-form {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .login-form:hover::before {
+            left: 100%;
+        }
+
+        .login-form:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        /* Modern Input Design */
+        .password-input {
+            width: 100%;
+            max-width: 320px;
+            padding: 18px 24px;
+            border: 2px solid transparent;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+
+        .password-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .password-input:focus {
+            border-color: #ff6b9d;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 4px rgba(255, 107, 157, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Modern Button Design */
+        .login-btn {
+            background: var(--love-gradient);
+            border: none;
+            border-radius: 16px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 18px 36px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .login-btn:hover::before {
+            left: 100%;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(255, 107, 157, 0.4);
+        }
+
+        .login-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .hint {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .error-message {
+            color: #ff4757;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 71, 87, 0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .error-message.show {
+            opacity: 1;
+            animation: modernShake 0.6s ease-in-out;
+        }
+
+        @keyframes modernShake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-8px); }
+            40% { transform: translateX(8px); }
+            60% { transform: translateX(-8px); }
+            80% { transform: translateX(8px); }
+        }
+
+        /* Main Website Styles */
+        .main-website {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .main-website.show {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: all;
+        }
+
+        /* Modern Header */
+        .main-header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            color: white;
+            position: relative;
+            z-index: 10;
+        }
+
+        .main-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #ff6b9d 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: logoFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .main-subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Modern Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 2rem 0;
+            position: relative;
+            z-index: 10;
+            padding: 0 2rem;
+        }
+
+        .nav-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--love-gradient);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .nav-btn:hover::before,
+        .nav-btn.active::before {
+            width: 120%;
+            height: 120%;
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        /* Content Sections */
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .section {
+            display: none;
+            animation: sectionFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            color: white;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes sectionFadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(40px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--glass-bg);
+            border-radius: 32px;
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            margin: 2rem 0;
+            box-shadow: var(--shadow-light);
+        }
+
+        .welcome-title {
+            
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff 0%,rgb(255, 255, 255) 100%);
+            -webkit-background-clip: text;
+            
+            background-clip: text;
+        }
+
+        .welcome-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Modern Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+            transform: translateY(100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .photo-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+
+        /* Reunion Animation */
+        .reunion-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .reunion-character {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 20px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 8px 16px rgba(255, 105, 180, 0.3));
+        }
+
+        .love-symbol {
+            font-size: 2.5rem;
+            animation: loveSymbolPulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 4px 8px rgba(255, 107, 157, 0.5));
+        }
+
+        @keyframes loveSymbolPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                filter: drop-shadow(0 4px 8px rgba(255, 107, 157, 0.5));
+            }
+            50% { 
+                transform: scale(1.2); 
+                filter: drop-shadow(0 8px 16px rgba(255, 107, 157, 0.8));
+            }
+        }
+
+        .reunion-animation:hover .reunion-character {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Spotify Player */
+        .spotify-player {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-light);
+        }
+
+        .spotify-message {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 3.5rem;
+            }
+            
+            .character-photo {
+                width: 100px;
+            }
+            
+            .password-input {
+                width: 280px;
+            }
+            
+            .login-form {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .nav-container {
+                gap: 8px;
+            }
+            
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .reunion-character {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            .character-photo {
+                width: 80px;
+            }
+            
+            .characters-container {
+                height: 150px;
+                margin: 1rem 0;
+            }
+            
+            .password-input {
+                width: 260px;
+            }
+        }
+
+        /* Loading animation for images */
+        .photo-item img {
+            opacity: 0;
+            animation: imageLoad 0.5s ease forwards;
+        }
+
+        @keyframes imageLoad {
+            to { opacity: 1; }
+        }
+        .day-counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.day-counter {
+    text-align: center;
+    color: #fff;
+}
+
+.counter-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.counter-display {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.time-unit {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    min-width: 70px;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
+}
+
+.time-number {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.time-number.animated {
+    transform: scale(1.3);
+    color: #ffd700; /* altın sarısı */
+}
+
+.time-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.counter-message {
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 16px;
+}
+.quiz-section {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quiz-title {
+    text-align: center;
+    color: #c71585;
+}
+
+.quiz-question {
+    margin-bottom: 15px;
+}
+
+.quiz-options label {
+    display: block;
+    margin-left: 10px;
+}
+#welcome-title, .welcome-text {
+    text-align: center;
+}
+
+#quiz-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.quiz-question {
+    font-size: 1.8em;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: inline-block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #ff99cc, #ff6699);
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 102, 153, 0.4);
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background: linear-gradient(135deg, #ff6699, #ff3366);
+    transform: scale(1.05);
+}
+
+.result {
+    font-size: 2em;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.result + p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.note-form label {
+    font-weight: bold;
+    color: #ff69b4; /* pembe ton */
+}
+
+.note-form select, 
+.note-form textarea {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.note-form textarea {
+    resize: vertical;
+}
+
+.note-form button {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.note-form button:hover {
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    transform: scale(1.05);
+}
+
+.note-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.note-item {
+    background: #e099d4;
+    border-left: 5px solid #ff69b4;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.note-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.note-item strong {
+    color: #ff1493;
+}
+
+.note-item small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 12px;
+}
+    </style>
+</head>
+<body>
+    <!-- Modern Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Geometric Shapes Background -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <!-- Modern Floating Hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginContainer">
+        <h1 class="couple-names">Serra ❤️ Eren</h1>
+        
+        <div class="characters-container" id="charactersContainer">
+            <div class="character girl-character">
+                <img src="images/stella.png" alt="Stella" class="character-photo">
+            </div>
+            <div class="love-bridge">💕</div>
+            <div class="character boy-character">
+                <img src="images/brandon.png" alt="Brandon" class="character-photo">
+            </div>
+        </div>
+        
+        <div class="login-form">
+            <h2 class="form-title">Hoş Geldin Fıstığım</h2>
+            
+            <input 
+                type="password" 
+                class="password-input" 
+                id="passwordInput" 
+                placeholder="🔐 Gizli Şifremizi Girin..."
+                onkeypress="checkEnter(event)"
+            >
+            
+            <br>
+            <button class="login-btn" onclick="checkPassword()">
+                💖 Aşkımıza Giriş Yap
+            </button>
+            
+            <div class="hint">
+                💡 İpucu: Bizi benzettiğin çizgi film karakterleri (küçük harflerle)
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                ❌ Yanlış şifre! Tekrar deneyin aşkım 💕
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website -->
+    <div class="main-website" id="mainWebsite">
+        <header class="main-header">
+            <h1 class="main-logo">Bizim Hikayemiz</h1>
+            <p class="main-subtitle">Serra & Eren'in Aşk Yolculuğu ✨</p>
+        </header>
+
+        <div class="day-counter-container">
+            <div class="day-counter">
+                <h3 class="counter-title">💕 Birlikte Geçirdiğimiz Zaman 💕</h3>
+                <div class="counter-display">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">0</span>
+                        <span class="time-label">Gün</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">0</span>
+                        <span class="time-label">Saat</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">0</span>
+                        <span class="time-label">Dakika</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">0</span>
+                        <span class="time-label">Saniye</span>
+                    </div>
+                </div>
+                <p class="counter-message">27 Kasım 2023'ten beri ❤️</p>
+            </div>
+        </div>
+        
+        <div class="nav-container">
+            <button class="nav-btn active" onclick="showMainSection('welcome')">🏠 Hoş Geldin</button>
+            <button class="nav-btn" onclick="showMainSection('story')">📖 Hikayemiz</button>
+            <button class="nav-btn" onclick="showMainSection('memories')">📸 Anılarımız</button>
+            <button class="nav-btn" onclick="showMainSection('notes')">💌 Notlarımız</button>
+            <button class="nav-btn" onclick="showMainSection('music')">🎵 Şarkımız</button>
+            <button class="nav-btn" onclick="showQuiz()">🧠 Aşk Quizi</button>
+        </div>
+
+        <div class="content">
+            <div id="welcome" class="section active">
+                <div class="welcome-section">
+                    <h2 class="welcome-title">Hoş Geldin Bitanem! 💕</h2>
+                    
+                    <div class="reunion-animation">
+                        <img src="images/stella.png" class="reunion-character" alt="Stella">
+                        <span class="love-symbol">💕</span>
+                        <img src="images/brandon.png" class="reunion-character" alt="Brandon">
+                    </div>
+                    
+                    <p class="welcome-text">
+                        Şifreyi doğru girdin ve artık sadece bizim olan bu özel alana girdin! 
+                        Bu siteyi tamamen bizim için, bizim aşkımız için ve bizim hikayemiz için tasarladım.
+                        Umarım beğenirsin..
+                    </p>
+                    
+                    <p class="welcome-text">
+                        Burada birlikte geçirdiğimiz her anı, her gülüşü, her mutlu dakikayı bulacaksın.
+                        Çünkü sen benim dünyamın en güzel parçasısın Bitanem...
+                    </p>
+                    
+                    <p class="welcome-text">
+                        <strong>Hazır mısın aşkımızın yolculuğuna çıkmaya? 💖</strong>
+                    </p>
+                </div>
+            </div>
+
+           <div id="story" class="section">
+    <div class="welcome-section">
+        <h2 class="welcome-title">Bizim Hikayemiz 📚</h2>
+        <p class="welcome-text">
+            ✨ <strong>BİR LABORATUVAR SİHRİ: İLK KARŞILAŞMA</strong><br>
+            27 Kasım 2023'te, üniversitenin ışıl ışıl laboratuvarında... Tıpkı Stella'nın büyülü dünyasına adım atar gibi, Serra o gün Eren'in hayatına girdi. Elifnaz'ın yanındaki bu ışıltılı kız, "<em>İcardi'yi mi seçerdin yoksa sevgilini mi?</em>" diye sorduğunda, Eren'in "<em>İcardi!</em>" cevabıyla çakan kıvılcım... İşte o an, Brandon'ın Stella'ya ilk bakışındaki büyü gibiydi!
+        </p>
+        <p class="welcome-text">
+            📅 <strong>KADERİN OYUNLARI</strong><br>
+            <strong>İlk Planlanan Buluşma:</strong> Kadıköy'deki "iş bahanesi" (Eren'in Stella'sını görmek için yaktığı ilk büyü!)<br>
+            <strong>Okuldaki Elektrik:</strong> Sürekli atışmalar, tıpkı Winx ve Specialists'ın maceralarındaki gibi!<br>
+            <strong>14 Şubat Sürprizi:</strong> Eren'in elinde çiçeklerle Serra'nın karşısına çıkışı... Aşkın galip geldiği an!
+        Ufak bir zaman yolculuğu/p>
+        <p class="welcome-text">
+            🎢 <strong>AYRILIK: KAYBOLAN IŞIK</strong><br>
+            6 aylık büyülü beraberlikten sonra gelen karanlık dönem... Tıpkı Winx'in güçlerini kaybettiği o üzücü bölümler gibi. Ama gerçek aşk, tıpkı Stella'nın sihirli yıldızı gibi her zaman parlıyordu içlerinde!
+        </p>
+        <p class="welcome-text">
+            🌠 <strong>YENİDEN DOĞUŞ: BİR DOĞUM GÜNÜ SÜRPRİZİ</strong><br>
+            Eren'in doğum günü... Serra'nın getirdiği sarı-kırmızı çiçekler (tıpkı Stella'nın güneş enerjisi gibi!), Eren'in hayatına yeniden ışık oldu. O gün, Brandon'ın kılıcıyla kestiği tüm engeller gibi, geçmişin yüklerini attılar!
+        </p>
+        <p class="welcome-text">
+            🌟 <strong>VE ŞİMDİ...</strong><br>
+            "Sen benim Stella'm, ben senin Brandon'ın..."<br>
+            <strong>En sevdiğim anımız:</strong> Laboratuvardaki o ilk bakış, çünkü orada bir büyü olduğunu biliyordum!<br>
+            <strong>En komik an:</strong> Seninle 'İcardi' kavgası yaparken ikimizin de yüzündeki şaşkın ifade!<br>
+            <strong>Sözümüz:</strong> "Sen ve Ben – sonsuza kadar!"
+        </p>
+        <p class="welcome-text">
+            💌 <strong>EREN'İN SON MESAJI:</strong><br>
+            "Serra, seninle her şey bir Winx bölümü kadar renkli! Laboratuvardaki o ilk soruna verdiğim cevabı düzeltiyorum: Artık bin İcardi verseler, seni seçerim! Çünkü sen... Benim ışığımsın! 💫"
+        </p>
+    </div>
+</div>
+
+
+            <<div id="memories" class="section">
+    <div class="welcome-section">
+        <h2 class="welcome-title">Anılarımız 📷</h2>
+        <p class="welcome-text">Ufak bir zaman yolculuğu yapmaya ne dersin prensesim? Fotoğrafların üzerine geldiğinde yazıları görebilirsin.</p>
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="images/ilkfotografimiz.jpg" alt="Anı 3">
+                <p class="photo-caption">İlk fotoğrafımız</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/ofoto.jpg" alt="Anı 3">
+                <p class="photo-caption">Farkında olmadan seni çektiğim an</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/sapka.jpg" alt="Anı 3">
+                <p class="photo-caption">Yine seni habersiz çekmişim</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/ilkuykun.jpg" alt="Anı 3">
+                <p class="photo-caption">Omzumdaki ilk uykun</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/ilklerden.jpg" alt="Anı 3">
+                <p class="photo-caption">Yine ilk zamanlardan çekildiğimiz bir fotoğraf</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/ensevdigin.jpg" alt="Anı 3">
+                <p class="photo-caption">İşte o meşhur fotoğrafımız</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/gülüs.jpg" alt="Anı 3">
+                <p class="photo-caption">Şu gülüşe bak kelebek görse ömrü uzar</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/albeni.jpg" alt="Anı 3">
+                <p class="photo-caption">Al beni, götür kanatlarında bu geceee</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/sigara.jpg" alt="Anı 3">
+                <p class="photo-caption">En ikonik fotoğraflarımızdan biri</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/regl.jpg" alt="Anı 3">
+                <p class="photo-caption">Regl olduğum foto :D</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/tepedencek.jpg" alt="Anı 3">
+                <p class="photo-caption">Ereeen tepeden çeek ahahah</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/dogumgünü.jpg" alt="Anı 1">
+                <p class="photo-caption">En sevdiğim doğum günüm</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/cicek.jpg" alt="Anı 2">
+                <p class="photo-caption">Ve en sevdiğim doğum günü hediyem</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/barıstık.jpg" alt="Anı 3">
+                <p class="photo-caption">Barıştıktan sonra çekildiğimiz ilk fotoğraf</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/benicek.jpg" alt="Anı 3">
+                <p class="photo-caption">Bi anda beni çek diyip poz verişin</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/makarna.jpg" alt="Anı 3">
+                <p class="photo-caption">Makarna yemeye gidip apar topar maltepeye döndüğümüz gün</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/masallah.jpg" alt="Anı 3">
+                <p class="photo-caption">Maşallah 🧿</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/yılbaşı.jpg" alt="Anı 3">
+                <p class="photo-caption">Yılbaşı ağacım🎄</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/ışık.jpg" alt="Anı 3">
+                <p class="photo-caption">Aşkımm ışık çok güzel çıkmış</p>
+            </div>
+             <div class="photo-item">
+                <img src="images/areon.jpg" alt="Anı 3">
+                <p class="photo-caption">Aşkım kokuyla poz ver hahahah</p>
+            </div>
+             <div class="photo-item">
+                <img src="images/araba.jpg" alt="Anı 3">
+                <p class="photo-caption">En sevidğim fotoğraflardan biri</p>
+            </div>
+            
+            
+            
+            
+            
+            <p class="photo-footer">ve daha çekileceğimiz binlerce fotoğraf...</p>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+<div id="notes" class="section" style="display: none;">
+    <div class="welcome-section">
+        <h2 class="welcome-title">💌 Notlarımız</h2>
+
+        <div class="note-form">
+            <label for="sender">Kimden:</label>
+            <select id="sender">
+                <option value="Eren">Eren</option>
+                <option value="Serra">Serra</option>
+            </select>
+
+            <label for="noteText">Not:</label>
+            <textarea id="noteText" rows="4" placeholder="Bugünün notunu yaz..."></textarea>
+
+            <button onclick="addNote()">Notu Kaydet</button>
+        </div>
+
+        <div class="note-list" id="noteList">
+            <!-- Notlar buraya gelecek -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="music" class="section">
+    <div class="welcome-section">
+        <h2 class="welcome-title">Şarkımız 🎶</h2>
+        <p class="welcome-text">Bizim şarkımız bu olsun aşkım dediğin o şarkı...</p>
+        
+        <!-- Spotify Embed Player -->
+        <div class="spotify-player">
+            <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/track/7dTFELL8B2ePDMDAzyuB7S?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="352" 
+                    frameborder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+            </iframe>
+        </div>
+        
+        <p class="spotify-message">Bu şarkı bizi anlatıyor ❤️</p>
+    </div>
+</div>
+
+<div id="quiz" class="section" style="display:none;">
+    <div class="welcome-section">
+        <h2 class="welcome-title">Aşk Quizi 💖</h2>
+        <div id="quiz-content">
+            <p class="welcome-text">Hazır mısın aşkım? Başlatınca sorular gelecek!</p>
+            <button onclick="startQuiz()">Quizi Başlat</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script>
+        const startDate = new Date(2023, 10, 27, 0, 0, 0); // Kasım = 10
+
+function updateCounter() {
+    const now = new Date();
+    const diffMs = now - startDate;
+
+    let diffSeconds = Math.floor(diffMs / 1000);
+
+    const days = Math.floor(diffSeconds / (24 * 3600));
+    diffSeconds %= (24 * 3600);
+
+    const hours = Math.floor(diffSeconds / 3600);
+    diffSeconds %= 3600;
+
+    const minutes = Math.floor(diffSeconds / 60);
+    const seconds = diffSeconds % 60;
+
+    updateElement("days", days);
+    updateElement("hours", hours.toString().padStart(2, '0'));
+    updateElement("minutes", minutes.toString().padStart(2, '0'));
+    updateElement("seconds", seconds.toString().padStart(2, '0'));
+}
+
+function updateElement(id, value) {
+    const el = document.getElementById(id);
+    if (el.textContent !== value.toString()) {
+        el.textContent = value;
+        el.classList.add("animated");
+        setTimeout(() => el.classList.remove("animated"), 300);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// Her saniye güncelle
+setInterval(updateCounter, 1000);
+updateCounter(); // Sayfa yüklenince başlat
+        const playBtn = document.getElementById('play-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const volumeControl = document.getElementById('volume-control');
+    let isPlaying = false;
+    
+    // Burada gerçek bir müzik dosyası ekleyebilirsiniz
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+    
+    playBtn.addEventListener('click', () => {
+        if(isPlaying) {
+            audio.pause();
+            playBtn.textContent = '▶';
+        } else {
+            audio.play();
+            playBtn.textContent = '⏸';
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    // Şarkı ilerleme çubuğu güncelleme
+    audio.addEventListener('timeupdate', () => {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.value = progress;
+    });
+    
+    // İlerleme çubuğundan şarkıyı ilerletme
+    progressBar.addEventListener('input', () => {
+        const seekTime = (progressBar.value / 100) * audio.duration;
+        audio.currentTime = seekTime;
+    });
+    
+    // Ses kontrolü
+    volumeControl.addEventListener('input', () => {
+        audio.volume = volumeControl.value / 100;
+    });
+        // Floating hearts animation
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💕', '💖', '💗', '💝', '💘'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            
+            document.getElementById('floatingHearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        // Create floating hearts periodically
+        setInterval(createFloatingHeart, 1000);
+
+        // Password checking
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value.toLowerCase().trim();
+            const correctPassword = 's'; // Şifreyi buradan değiştir
+            
+            if (password === correctPassword) {
+                // Correct password
+                const charactersContainer = document.getElementById('charactersContainer');
+                const loginContainer = document.getElementById('loginContainer');
+                const mainWebsite = document.getElementById('mainWebsite');
+                
+                // Characters unite animation
+                charactersContainer.classList.add('unite');
+                
+                // Create celebration hearts
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        createCelebrationHeart();
+                    }, i * 100);
+                }
+                
+                // Transition to main website after animation
+                setTimeout(() => {
+                    loginContainer.classList.add('hide');
+                    setTimeout(() => {
+                        mainWebsite.classList.add('show');
+                        document.body.style.overflow = 'auto';
+                    }, 1000);
+                }, 2000);
+                
+            } else {
+                // Wrong password
+                const errorMessage = document.getElementById('errorMessage');
+                const passwordInput = document.getElementById('passwordInput');
+                
+                errorMessage.classList.add('show');
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                setTimeout(() => {
+                    errorMessage.classList.remove('show');
+                }, 3000);
+            }
+        }
+
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        }
+        
+
+    // İlk çağrı (sayfa yüklenince hemen gözüksün)
+    updateCounter();
+
+        // Celebration hearts
+        function createCelebrationHeart() {
+            const heart = document.createElement('div');
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.top = Math.random() * window.innerHeight + 'px';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            heart.style.color = ['#ff6b9d', '#c44569', '#ff4757', '#ff6348'][Math.floor(Math.random() * 4)];
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '1000';
+            heart.innerHTML = ['💕', '💖', '💗', '💝', '💘', '❤️'][Math.floor(Math.random() * 6)];
+            heart.style.animation = 'celebrationFloat 3s ease-out forwards';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+
+        // Add celebration animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes celebrationFloat {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0px) scale(0);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateY(-50px) scale(1.2);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100px) scale(0.8);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Main website navigation
+        function showMainSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active from all nav buttons
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Add active to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Auto-focus password input when page loads
+        window.addEventListener('load', function() {
+            document.getElementById('passwordInput').focus();
+        });
+
+        // Console message
+        console.log(`
+        ╔══════════════════════════════════════╗
+        ║            💕 Serra & Eren 💕        ║
+        ║                                      ║
+        ║         Özel Aşk Sitesi              ║
+        ║         Made with Love ❤️            ║
+        ║                                      ║
+        ╚══════════════════════════════════════╝
+        `);
+
+        
+    </script>
+    <script>
+        function showQuiz() {
+    showMainSection('quiz');
+    startQuiz();
+}
+function showMainSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+const quizData = [
+    {
+        question: "İlk tanıştığımız günü hatırlıyor musun?",
+        options: ["27 Kasım 2023", "14 Şubat 2024", "1 Ocak 2024", "19 Mayıs 2024", "Unuttum 😅"],
+        correct: "27 Kasım 2023"
+    },
+    {
+        question: "İlk buluşmamız neredeydi?",
+        options: ["Kadıköy", "Beşiktaş", "Üsküdar", "Taksim", "Maltepe"],
+        correct: "Kadıköy"
+    },
+    {
+        question: "İlk tanıştığımızda üstümde ne vardı?",
+        options: ["Tişört", "Hırka", "Mont", "Sweatshirt", "Polar"],
+        correct: "Mont"
+    },
+    {
+        question: "Sana ilk aldığım çiçek neydi?",
+        options: ["Lale", "Papatya", "Menekşe", "Gül", "Sümbül"],
+        correct: "Gül"
+    },
+    {
+        question: "Doğum günüm ne zaman?",
+        options: ["21Kasım", "20Kasım", "14Kasım", "16Kasım", "19Kasım"],
+        correct: "16Kasım"
+    },
+    {
+        question: "En sevdiğim yemek nedir?",
+        options: ["Lahmacun", "Kuru Fasulye", "Pizza", "İskender", "Döner"],
+        correct: "Kuru Fasulye"
+    },
+    {
+        question: "İkinci buluşmamızda seni nereye bıraktım?",
+        options: ["Küçükyalı", "Kadıköy", "Maltepe", "Bostancı", "İdealtepe"],
+        correct: "Kadıköy"
+    },
+    {
+        question: "İlk öpüşmemiz nerdeydi?",
+        options: ["Sahilde", "Evde", "Okulda", "Arabada", "Bilmiyorum"],
+        correct: "Okulda"
+    },
+    {
+        question: "Sende en sevdiğim şey?",
+        options: ["Saçların", "Gözlerin", "Dudakların", "Fiziğin", "Yanakların"],
+        correct: "Gözlerin"
+    },
+    {
+        question: "Sana aldığım ilk hediye?",
+        options: ["Çiçek", "Çikolata/Kek", "Oyuncak", "Kitap", "Bilmiyorum"],
+        correct: "Kitap"
+    },
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function startQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+}
+
+function showQuestion() {
+    const q = quizData[currentQuestion];
+    const container = document.getElementById("quiz-content");
+    container.innerHTML = `
+    <p class="quiz-question">${currentQuestion + 1}. ${q.question}</p>
+    ${q.options.map(opt => `<button class="option-btn" onclick="selectAnswer('${opt}')">${opt}</button>`).join("<br>")}
+`;
+}
+
+function selectAnswer(selected) {
+    if (selected === quizData[currentQuestion].correct) {
+        score++;
+    }
+    currentQuestion++;
+    if (currentQuestion < quizData.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    const container = document.getElementById("quiz-content");
+    const percentage = Math.round((score / quizData.length) * 100);
+    let emoji = "💔";
+    if (percentage >= 80) {
+        emoji = "🥰";
+    } else if (percentage >= 50) {
+        emoji = "😊";
+    }
+    container.innerHTML = `
+        <p class="result">Skorun: ${percentage}/100 ${emoji}</p>
+        <p>Seninle aşk yolculuğumuzun testi işte böyleydi! 🎉</p>
+        <button onclick="startQuiz()">Tekrar Dene</button>
+    `;
+}
+
+// Bölümler arası geçişi sağlamak için örnek fonksiyon
+function showMainSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+<script>
+    // Notları LocalStorage'da tut
+    let notes = JSON.parse(localStorage.getItem('notes')) || [];
+
+    function showMainSection(sectionId) {
+        // Tüm section'ları gizle
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.display = 'none';
+        });
+        // İlgili section'ı göster
+        document.getElementById(sectionId).style.display = 'block';
+
+        // Eğer notes kısmı açıldıysa notları yükle
+        if (sectionId === 'notes') {
+            displayNotes();
+        }
+    }
+
+    function addNote() {
+        const sender = document.getElementById('sender').value;
+        const text = document.getElementById('noteText').value.trim();
+
+        if (text === '') {
+            alert('Lütfen bir not yaz!');
+            return;
+        }
+
+        const newNote = {
+            sender: sender,
+            text: text,
+            date: new Date().toLocaleString()
+        };
+
+        notes.push(newNote);
+        localStorage.setItem('notes', JSON.stringify(notes));
+        displayNotes();
+
+        // Formu temizle
+        document.getElementById('noteText').value = '';
+    }
+
+    function displayNotes() {
+        const noteList = document.getElementById('noteList');
+        noteList.innerHTML = '';
+
+        if (notes.length === 0) {
+            noteList.innerHTML = '<p>Henüz not eklenmedi.</p>';
+            return;
+        }
+
+        notes.slice().reverse().forEach(note => {
+            const noteDiv = document.createElement('div');
+            noteDiv.className = 'note-item';
+            noteDiv.innerHTML = `
+                <strong>${note.sender}:</strong> ${note.text}
+                <br><small>${note.date}</small>
+            `;
+            noteList.appendChild(noteDiv);
+        });
+    }
+</script>
+
+</body>
+</html>
